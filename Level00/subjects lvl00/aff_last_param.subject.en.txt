@@ -1,4 +1,4 @@
-./a.outtAssignment name  : aff_last_param
+Assignment name  : aff_last_param
 Expected files   : aff_last_param.c
 Allowed functions: write
 --------------------------------------------------------------------------------
