@@ -1,40 +1,37 @@
-
 #include <unistd.h>
 
-void ft_wdmatch(char *a, char *b)
-{
-	int i = 0;
-	int j = 0;
+void    wdmatch(char *a, char *b);
 
-	while ((a[i] && b[j]) != 0)
-	{
-		if (a[i] == b[j])
-		{
-			i++;
-			j++;
-			if (a[i] == '\0')
-			{
-				while (*a)
-				{
-					write (1, a, 1);
-					a++;
-				}
-				return ;
-			}
-		}
-		else
-			j++;
-	}
+int main(int argc, char **argv)
+{
+    if (argc == 3)
+        wdmatch(argv[1], argv[2]);
+    write (1, "\n", 1);
+    return (0);
 }
 
-int main (int ac, char **av)
+void    wdmatch(char *a, char *b)
 {
-	if (ac == 3)
-	{
-		ft_wdmatch(av[1], av[2]);
-	}
-	write (1, "\n", 1);
-	return (0);
+    int i,
+    int j;
+    i = 0;
+    j = 0;
+    while (a[i] && b[j])
+    {
+        if (a[i] == b[j])
+        {
+            i++;
+            j++;
+            if (a[i] == '\0')
+            {
+                while(*a)
+                    write (1, a++, 1);
+                return ;
+            }
+        }
+        else
+            j++;
+    }
 }
 
 //Assignment name  : wdmatch
@@ -63,4 +60,43 @@ int main (int ac, char **av)
 //$
 //$>./wdmatch | cat -e
 //$
+
+
+//#include <unistd.h>
+//
+//void ft_wdmatch(char *a, char *b)
+//{
+//    int i = 0;
+//    int j = 0;
+//
+//    while ((a[i] && b[j]) != 0)
+//    {
+//        if (a[i] == b[j])
+//        {
+//            i++;
+//            j++;
+//            if (a[i] == '\0')
+//            {
+//                while (*a)
+//                {
+//                    write (1, a, 1);
+//                    a++;
+//                }
+//                return ;
+//            }
+//        }
+//        else
+//            j++;
+//    }
+//}
+//
+//int main (int ac, char **av)
+//{
+//    if (ac == 3)
+//    {
+//        ft_wdmatch(av[1], av[2]);
+//    }
+//    write (1, "\n", 1);
+//    return (0);
+//}
 
