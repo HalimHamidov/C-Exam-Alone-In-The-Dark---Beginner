@@ -1,61 +1,44 @@
 #include <stdlib.h>
-#include <stdio.h> //for main test
+#include <stdio.h>
 
-static int    ft_strlen(const char *s)
+static    int    ft_nbrlen(long c, int len)
 {
-    int i;
+    int    base;
     
-    i = 0;
-    while (s[i])
-        i++;
-    return i;
+    base = 10;
+    while (c > 0)
+    {
+        c /= base;
+        len++;
+    }
+    return (len);
 }
 
-static char    *ft_strrev(char *str)
+char    *ft_itoa(int n)//ft_itoa # takes int n and returns new array of chars.
 {
-    int i;
-    int j;
-    int tmp;
+    int        len;
+    long    nb;
+    char    *res;
+    char    *str;
     
-    i = 0;
-    j = ft_strlen(str);
-    while (j > i)
+    str = "0123456789";// base string
+    len = n < 0 ? 1 : 0;// when the integer is - we then put len = 1;
+    nb = n < 0 ? -(long)n : n;//use the temp (nb) long variable to perform the operation.
+    len = ft_nbrlen(nb, len);//will provide the length of the integer.
+    len = (n == 0) ? 1 : len;// corner case for 0.
+    if (!(res = (char *)malloc(sizeof(char) * (len + 1))))// allocate the heap memory.
+        return (NULL);
+    if (n == 0)// for corner case (0)
+        res[0] = '0';
+    res[len] = '\0';// terminate the last char of the string.
+    while (nb > 0)// iteration for the value.
     {
-        j--;
-        tmp = str[i];
-        str[i] = str[j];
-        str[j] = tmp;
-        i++;
+        res[--len] = str[nb % 10];
+        nb /= 10;
     }
-    return str;
-}
-
-char    *ft_itoa(int nbr)
-{
-    int i;
-    int neg;
-    char *tmp;
-    
-    i = 0;
-    neg = 0;
-    tmp = malloc(sizeof(char) * 12);
-    if (tmp == NULL || nbr == 0)
-        return ((nbr == 0) ? "0" : NULL);
-    if (nbr == -2147483648)
-        return ("-2147483648");
-    if (nbr < 0)
-    {
-        neg = 1;
-        nbr *= -1;
-    }
-    while (nbr)
-    {
-        tmp[i++] = (nbr % 10) + '0';
-        nbr /= 10;
-    }
-    if (neg)
-        tmp[i] = '-';
-    return ft_strrev(tmp);
+    if (n < 0)// if the number is negative put '-' at first place.
+        res[0] = '-';
+    return (res);
 }
 
 int main()
@@ -72,16 +55,6 @@ int main()
     printf("%s\n", ft_itoa(2147483647));
     return (0);
 }
-//int    main(void)
-//{
-//    int i = 0;
-//    int tab[5] = {-2147483648, -42, 0, 42, 2147483647};
-//
-//    while (i < 5)
-//        printf("%s\n", ft_itoa(tab[i++]));
-//
-//    return 0;
-//}
 
 // ft_itoa
 // Prototype
@@ -120,5 +93,4 @@ int main()
 //543000
 //-2147483648
 //2147483647
-
 
