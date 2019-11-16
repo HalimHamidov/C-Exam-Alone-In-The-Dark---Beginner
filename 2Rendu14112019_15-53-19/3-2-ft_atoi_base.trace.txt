@@ -1,0 +1,55 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+oa-b4.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 14 14:11:31 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191114/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/nv/vf_jszv944xd3v5kx79rjxfw0000gq/T/tmpHXNxna/user log --pretty='%H - %an, %ad : %s'
+807e3e625e74b915add957f405fa14073127c302 - Exam 42, Thu Nov 14 12:24:58 2019 +0300 : do_op
+912a901e091d3c35ec06218860b6b6b11a45236b - Exam 42, Thu Nov 14 12:10:00 2019 +0300 : ft_swap
+c6306ba0b764edc9a37f181b526c1d2aee0930a6 - Exam 42, Thu Nov 14 12:04:51 2019 +0300 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/nv/vf_jszv944xd3v5kx79rjxfw0000gq/T/tmpHXNxna/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 14:11 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   797 Nov 14 14:11 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 14:11 do_op
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 14:11 ft_swap
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 14:11 hello
+
+/var/folders/nv/vf_jszv944xd3v5kx79rjxfw0000gq/T/tmpHXNxna/user/do_op:
+total 8
+-rw-r--r--  1 deepthought  deepthought  602 Nov 14 14:11 do_op.c
+
+/var/folders/nv/vf_jszv944xd3v5kx79rjxfw0000gq/T/tmpHXNxna/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  95 Nov 14 14:11 ft_swap.c
+
+/var/folders/nv/vf_jszv944xd3v5kx79rjxfw0000gq/T/tmpHXNxna/user/hello:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 14:11 .DS_Store
+-rw-r--r--  1 deepthought  deepthought    87 Nov 14 14:11 hello.c
+ 
+= ft_atoi_base =================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

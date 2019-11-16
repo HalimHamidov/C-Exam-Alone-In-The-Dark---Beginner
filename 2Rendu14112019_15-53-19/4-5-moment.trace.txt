@@ -1,0 +1,87 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+at-k4.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 14 15:39:51 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191114/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user log --pretty='%H - %an, %ad : %s'
+9477d4e024f9fec20d831d99b4dd7b83fbfd9255 - Exam 42, Thu Nov 14 15:24:02 2019 +0300 : tab_mult
+1008f4ad56f6ecabc9c540a7998d5a77202ae556 - Exam 42, Thu Nov 14 15:21:55 2019 +0300 : tab_mult
+0a95feb99ae5ee959f2d34e7135a2133f9cc6c88 - Exam 42, Thu Nov 14 14:27:42 2019 +0300 : ft_list_size
+807e3e625e74b915add957f405fa14073127c302 - Exam 42, Thu Nov 14 12:24:58 2019 +0300 : do_op
+912a901e091d3c35ec06218860b6b6b11a45236b - Exam 42, Thu Nov 14 12:10:00 2019 +0300 : ft_swap
+c6306ba0b764edc9a37f181b526c1d2aee0930a6 - Exam 42, Thu Nov 14 12:04:51 2019 +0300 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user
+total 32
+-rw-r--r--  1 deepthought  deepthought  8196 Nov 14 15:39 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  2214 Nov 14 15:39 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 15:39 do_op
+drwxr-xr-x  5 deepthought  deepthought   170 Nov 14 15:39 ft_list_size
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 15:39 ft_swap
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 15:39 hello
+drwxr-xr-x  5 deepthought  deepthought   170 Nov 14 15:39 hidenp.c
+drwxr-xr-x  6 deepthought  deepthought   204 Nov 14 15:39 str_capitalizer
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 15:39 tab_mult
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/do_op:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   602 Nov 14 15:39 do_op.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/ft_list_size:
+total 32
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   157 Nov 14 15:39 ft_list.h
+-rw-r--r--  1 deepthought  deepthought   189 Nov 14 15:39 ft_list_size.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  95 Nov 14 15:39 ft_swap.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/hello:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rw-r--r--  1 deepthought  deepthought    87 Nov 14 15:39 hello.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/hidenp.c:
+total 48
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rwxr-xr-x  1 deepthought  deepthought  8432 Nov 14 15:39 a.out
+-rw-r--r--  1 deepthought  deepthought   345 Nov 14 15:39 hiden_p.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/str_capitalizer:
+total 56
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rwxr-xr-x  1 deepthought  deepthought  8432 Nov 14 15:39 a.out
+-rw-r--r--  1 deepthought  deepthought  1266 Nov 14 15:39 str_capitalizer.c
+-rw-r--r--  1 deepthought  deepthought   908 Nov 14 15:39 str_capitalizer2.c
+
+/var/folders/8b/k2f85d9n7_s9r5wq5x6tgwh40000gq/T/tmpcjn8JX/user/tab_mult:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 15:39 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1158 Nov 14 15:39 tab_mult.c
+ 
+= moment =======================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

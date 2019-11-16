@@ -38,8 +38,17 @@ int        ft_atoi_base(const char *str, int str_base)
     result = 0;
     while (ft_isblank(*str))
         str++;
-    sign = (*str == '-') ? -1 : 1;
-    (*str == '-' || *str == '+') ? ++str : 0;
+    
+    //sign = (*str == '-') ? -1 : 1;
+    if (*str == '-')
+        sign = -1;
+    else
+        sign = 1;
+    
+    //(*str == '-' || *str == '+') ? ++str : 0;
+    if (*str == '-' || *str == '+')
+        ++str;
+
     while (isvalid(*str, str_base))
         result = result * str_base + value_of(*str++);
     return (result * sign);

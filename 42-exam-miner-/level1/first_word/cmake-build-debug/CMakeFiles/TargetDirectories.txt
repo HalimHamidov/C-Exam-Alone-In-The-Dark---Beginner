@@ -1,0 +1,3 @@
+/Users/apearl/Desktop/42-exam-miner-/level1/first_word/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/apearl/Desktop/42-exam-miner-/level1/first_word/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apearl/Desktop/42-exam-miner-/level1/first_word/cmake-build-debug/CMakeFiles/first_word.dir

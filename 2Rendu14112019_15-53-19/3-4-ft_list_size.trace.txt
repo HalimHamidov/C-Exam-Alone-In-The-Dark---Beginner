@@ -1,0 +1,68 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+il-k3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 14 14:27:55 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191114/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user log --pretty='%H - %an, %ad : %s'
+0a95feb99ae5ee959f2d34e7135a2133f9cc6c88 - Exam 42, Thu Nov 14 14:27:42 2019 +0300 : ft_list_size
+807e3e625e74b915add957f405fa14073127c302 - Exam 42, Thu Nov 14 12:24:58 2019 +0300 : do_op
+912a901e091d3c35ec06218860b6b6b11a45236b - Exam 42, Thu Nov 14 12:10:00 2019 +0300 : ft_swap
+c6306ba0b764edc9a37f181b526c1d2aee0930a6 - Exam 42, Thu Nov 14 12:04:51 2019 +0300 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 14:27 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1069 Nov 14 14:27 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 14:27 do_op
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 14:27 ft_list_size
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 14:27 ft_swap
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 14:27 hello
+
+/var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user/do_op:
+total 8
+-rw-r--r--  1 deepthought  deepthought  602 Nov 14 14:27 do_op.c
+
+/var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user/ft_list_size:
+total 16
+-rw-r--r--  1 deepthought  deepthought  157 Nov 14 14:27 ft_list.h
+-rw-r--r--  1 deepthought  deepthought  189 Nov 14 14:27 ft_list_size.c
+
+/var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  95 Nov 14 14:27 ft_swap.c
+
+/var/folders/0f/3fsgn23n6_s8l38yj0nrl22m0000gq/T/tmpiuumCG/user/hello:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 14:27 .DS_Store
+-rw-r--r--  1 deepthought  deepthought    87 Nov 14 14:27 hello.c
+ 
+= ft_list_size =================================================================
+$> gcc -Wextra -Wall -Werror ft_list_size.c main.c -o user_exe 
+ft_list_size.c:11:12: error: incompatible pointer to integer conversion returning 't_list *' (aka 'struct s_list *') from a function with result type 'int' [-Werror,-Wint-conversion]
+    return (list_ptr);
+           ^~~~~~~~~~
+1 error generated.
+
+Could not compile 'user_exe'
+Grade: 0
+
+= Final grade: 0 ===============================================================

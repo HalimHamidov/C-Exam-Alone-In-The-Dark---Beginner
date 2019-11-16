@@ -1,0 +1,95 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-l3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 14 12:11:52 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191114/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/_6/ytf0lw2s2l3_pbqgtrjhbr7m0000gq/T/tmppohE3v/user log --pretty='%H - %an, %ad : %s'
+912a901e091d3c35ec06218860b6b6b11a45236b - Exam 42, Thu Nov 14 12:10:00 2019 +0300 : ft_swap
+c6306ba0b764edc9a37f181b526c1d2aee0930a6 - Exam 42, Thu Nov 14 12:04:51 2019 +0300 : hello
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/_6/ytf0lw2s2l3_pbqgtrjhbr7m0000gq/T/tmppohE3v/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 12:11 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   530 Nov 14 12:11 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 14 12:11 ft_swap
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 14 12:11 hello
+
+/var/folders/_6/ytf0lw2s2l3_pbqgtrjhbr7m0000gq/T/tmppohE3v/user/ft_swap:
+total 8
+-rw-r--r--  1 deepthought  deepthought  95 Nov 14 12:11 ft_swap.c
+
+/var/folders/_6/ytf0lw2s2l3_pbqgtrjhbr7m0000gq/T/tmppohE3v/user/hello:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 14 12:11 .DS_Store
+-rw-r--r--  1 deepthought  deepthought    87 Nov 14 12:11 hello.c
+ 
+= ft_swap ======================================================================
+$> gcc -Wextra -Wall -Werror ft_swap.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./xun50hw3q7wupjjnl406ksa5 "1045862872" "-250245332"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./j1zbytkcz9tmr32phfufjybq "1625816340" "2023185895"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./6viaee1b9ptzg4wffglmzfp1 "-1465520862" "1405026339"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./1py0bh507j5vh214nimoh5ci "-1859085550" "2042777120"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./4q71ssken0mqg5b1pqyiauts "-1326977191" "-337216924"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./inei8ugi7ur006b14ct8zxvz "-921083552" "284608136"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./9h1drwx97xa5ri1er0l7b05l "-1632780798" "-926915310"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./266w6lxb5k0xdv7ih5e7m7p6 "-1188858494" "-1149374809"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./vxyhglbk731i7546s1vqysy0 "-54528575" "-816885002"
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
