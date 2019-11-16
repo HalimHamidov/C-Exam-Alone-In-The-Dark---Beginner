@@ -9,7 +9,7 @@ int     *ft_rrange(int start, int end)
         len = end - start + 1;
     else
         len = start - end + 1;
-    r = (int*)malloc(sizeof(int) * len);
+
     if (!(r = (int*)malloc(sizeof(int) * len)))
         return (NULL);
     while (len--)

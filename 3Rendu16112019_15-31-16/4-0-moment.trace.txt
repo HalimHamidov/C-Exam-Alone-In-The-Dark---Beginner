@@ -1,0 +1,43 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+at-p5.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Nov 16 14:22:07 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191116/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/p7/s0hgt9b56_qf7tknndw0gghm0000gq/T/tmpxSmG3k/user log --pretty='%H - %an, %ad : %s'
+5eae83f788ee705216063af1a3dc3ec7f47ca8ae - Exam 42, Sat Nov 16 14:17:25 2019 +0300 : str_capitalizer
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/p7/s0hgt9b56_qf7tknndw0gghm0000gq/T/tmpxSmG3k/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 16 14:22 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   374 Nov 16 14:22 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 16 14:22 str_capitalizer
+
+/var/folders/p7/s0hgt9b56_qf7tknndw0gghm0000gq/T/tmpxSmG3k/user/str_capitalizer:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 16 14:22 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   658 Nov 16 14:22 str_capitalizer.c
+ 
+= moment =======================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/a.out",
-            "args": ["a FiRSt LiTTlE TESt"],
+            "args": ["5156454"],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
             "environment": [],

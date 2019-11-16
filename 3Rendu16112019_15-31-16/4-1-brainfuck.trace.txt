@@ -1,0 +1,49 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+mi-v1.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Nov 16 14:28:05 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191116/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/4c/r_9b5rs57ql2zdxkmdgb6bbm0000gq/T/tmpNth34x/user log --pretty='%H - %an, %ad : %s'
+73dd1951301707a7c0f6dddebbebe272d4f51957 - Exam 42, Sat Nov 16 14:27:05 2019 +0300 : add_prime_sum
+5eae83f788ee705216063af1a3dc3ec7f47ca8ae - Exam 42, Sat Nov 16 14:17:25 2019 +0300 : str_capitalizer
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/4c/r_9b5rs57ql2zdxkmdgb6bbm0000gq/T/tmpNth34x/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 16 14:28 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   683 Nov 16 14:28 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Nov 16 14:28 add_prime
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 16 14:28 str_capitalizer
+
+/var/folders/4c/r_9b5rs57ql2zdxkmdgb6bbm0000gq/T/tmpNth34x/user/add_prime:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1248 Nov 16 14:28 add_prime.c
+
+/var/folders/4c/r_9b5rs57ql2zdxkmdgb6bbm0000gq/T/tmpNth34x/user/str_capitalizer:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 16 14:28 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   658 Nov 16 14:28 str_capitalizer.c
+ 
+= brainfuck ====================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

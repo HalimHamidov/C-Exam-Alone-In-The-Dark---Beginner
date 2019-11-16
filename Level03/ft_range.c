@@ -21,7 +21,6 @@ int     *ft_range(int start, int end)
     return (r);
 }
 
-#include <stdio.h>
 
 int main (void)
 {
@@ -55,3 +54,6 @@ int main (void)
 // //- With (-1, 2) you will return an array containing -1, 0, 1 and 2.
 // //- With (0, 0) you will return an array containing 0.
 // //- With (0, -3) you will return an array containing 0, -1, -2 and -3.
+//r[0] = 1 = result[0]
+//r[1] = 2 = result[1]
+//r[2] = 3 = result[2]
