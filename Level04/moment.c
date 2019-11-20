@@ -6,7 +6,7 @@
 /*   By: apearl <apearl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 19:29:25 by apearl            #+#    #+#             */
-/*   Updated: 2019/11/15 21:38:04 by apearl           ###   ########.fr       */
+/*   Updated: 2019/11/20 10:37:11 by apearl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,8 +159,8 @@ char    *moment_minutes(unsigned int duration)
     
     duration /= 60;
     numb = ft_itoa(duration);
+    len += ft_strlen(numb);
     len += ft_strlen(" minute ago.");
-    len += 12;
     if (duration != 1)
         len += 1;
     str = malloc(len * sizeof(char));
@@ -181,7 +181,8 @@ char    *moment_seconds(unsigned int duration)
     char    *str;
     char    *ptr_str;
     char    *numb;
-    
+
+   len = 0; 
     numb = ft_itoa(duration);
     len += ft_strlen(numb);
     len += ft_strlen(" second ago.");
@@ -190,7 +191,7 @@ char    *moment_seconds(unsigned int duration)
     str = malloc(len * sizeof(char));
     ptr_str = str;
     ft_strcpy(str, numb);
-    str += ft_strlen(numb);
+    str = str + ft_strlen(numb);//ft_strlen(numb);
     if (duration != 1)
         ft_strcpy(str, " seconds ago.");
     else
@@ -216,35 +217,36 @@ char    *moment(unsigned int duration)
 
 int     main(void)
 {
-    printf("%s\n", moment(0));
-    printf("%s\n", moment(1));
+    // printf("%s\n", moment(0));
+    // printf("%s\n", moment(1));
     printf("%s\n", moment(30));
-    printf("%s\n", moment(65));
-    printf("%s\n", moment(120));
-    printf("%s\n", moment(2400));
-    printf("%s\n", moment(3735));
-    printf("\n");
-    printf("%s\n", moment(50));
-    printf("%s\n", moment(10));
-    printf("%s\n", moment(0));
-    printf("%s\n", moment(1));
-    printf("%s\n", moment(65));
-    printf("%s\n", moment(120));
-    printf("%s\n", moment(2400));
-    printf("%s\n", moment(3599));
-    printf("%s\n", moment(3600));
-    printf("%s\n", moment(36000));
-    printf("%s\n", moment(12345));
-    printf("%s\n", moment(86399));
-    printf("%s\n", moment(86400));
-    printf("%s\n", moment(100000));
-    printf("%s\n", moment(123450));
-    printf("%s\n", moment(863990));
-    printf("%s\n", moment(2593000));
-    printf("%s\n", moment(3000000));
-    printf("%s\n", moment(5000000));
-    printf("%s\n", moment(20000000));
-    printf("%s\n", moment(33100000));
+    // printf("%s\n", moment(65));
+    // printf("%s\n", moment(120));
+    // printf("%s\n", moment(2400));
+    // printf("%s\n", moment(3735));
+    // printf("\n");
+    // printf("%s\n", moment(50));
+    // printf("%s\n", moment(10));
+    // printf("%s\n", moment(0));
+    // printf("%s\n", moment(1));
+    // printf("%s\n", moment(65));
+    // printf("%s\n", moment(120));
+    // printf("%s\n", moment(2400));
+    // printf("%s\n", moment(3599));
+    // printf("%s\n", moment(3600));
+    // printf("%s\n", moment(36000));
+    // printf("%s\n", moment(12345));
+    // printf("%s\n", moment(86399));
+    // printf("%s\n", moment(86400));
+    // printf("%s\n", moment(100000));
+    // printf("%s\n", moment(123450));
+    // printf("%s\n", moment(863990));
+    // printf("%s\n", moment(2593000));
+    // printf("%s\n", moment(3000000));
+    // printf("%s\n", moment(5000000));
+    // printf("%s\n", moment(20000000));
+    //     printf("\n");
+    // printf("%s\n", moment(33100000));
     
 }
 
@@ -278,3 +280,31 @@ int     main(void)
 //moment(2400)    => 40 minutes ago.
 //moment(3735)    => 1 hour ago.
 
+// 0 seconds ago.
+// 1 second ago.
+// 30 seconds ago.
+// 1 minute ago.
+// 2 minutes ago.
+// 40 minutes ago.
+// 1 hour ago.
+
+// 50 seconds ago.
+// 10 seconds ago.
+// 0 seconds ago.
+// 1 second ago.
+// 1 minute ago.
+// 2 minutes ago.
+// 40 minutes ago.
+// 59 minutes ago.
+// 1 hour ago.
+// 10 hours ago.
+// 3 hours ago.
+// 23 hours ago.
+// 1 day ago.
+// 1 day ago.
+// 1 day ago.
+// 9 days ago.
+// 1 month ago.
+// 1 month ago.
+// 1 month ago.
+// 7 months ago.
