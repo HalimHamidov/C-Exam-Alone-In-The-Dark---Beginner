@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+mi-d3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 21 14:08:16 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191121/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/04/dzj_5h8x0qj5234zznsr29_w0000gq/T/tmp2W9Ii7/user log --pretty='%H - %an, %ad : %s'
+1654b5afc4748874332fdb8500315f16b717cc92 - Exam 42, Thu Nov 21 13:58:50 2019 +0300 : hidenp
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/04/dzj_5h8x0qj5234zznsr29_w0000gq/T/tmp2W9Ii7/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  241 Nov 21 14:08 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 21 14:08 hidenp
+
+/var/folders/04/dzj_5h8x0qj5234zznsr29_w0000gq/T/tmp2W9Ii7/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  706 Nov 21 14:08 hidenp.c
+ 
+= hidenp =======================================================================
+$> gcc -Wextra -Wall -Werror hidenp.c -o user_exe 
+hidenp.c:36:15: error: array subscript is of type 'char' [-Werror,-Wchar-subscripts]
+        if (s2[*s1++])
+              ^~~~~~
+1 error generated.
+
+Could not compile 'user_exe'
+Grade: 0
+
+= Final grade: 0 ===============================================================

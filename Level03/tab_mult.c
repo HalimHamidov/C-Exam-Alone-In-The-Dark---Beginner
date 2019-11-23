@@ -33,7 +33,7 @@ void	ft_putnbr(int nbr)
 		write(1, "-", 1);
 	}
 	if (nbr < 10)
-	{
+	{ 
 		c = nbr + '0';
 		write(1, &c, 1);
 	}

@@ -22,7 +22,7 @@ unsigned int	ft_strlen(int *str)
 	return (i);
 }
 
-void	sort_in_tab(int *tab, unsigned int size)
+void	sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int i;
 	int tmp;
@@ -52,7 +52,7 @@ int		main(void)
 		return (0);
 	tab[0] = 7;
 	tab[1] = 5;
-	tab[2] = 4;
+	tab[2] = 0;
 	// tab[3] = 2;
 	// tab[4] = 4;
 	// tab[5] = 4;
@@ -61,7 +61,7 @@ int		main(void)
 	// tab[8] = 3;
 	// tab[9] = 2;
 	tab[3] = '\0';
-	sort_in_tab(tab, ft_strlen(tab));
+	sort_int_tab(tab, ft_strlen(tab));
 	print(tab);
 	return (0);
 }

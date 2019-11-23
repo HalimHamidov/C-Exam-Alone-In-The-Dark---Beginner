@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-o3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 21 15:08:47 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191121/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/4m/8mq099qd23g49_vnlb19v6540000gq/T/tmpHMorBP/user log --pretty='%H - %an, %ad : %s'
+873fe792ca971277a1fdf965e241b77511f9c2b6 - Exam 42, Thu Nov 21 15:01:21 2019 +0300 : str_capitalizer
+1654b5afc4748874332fdb8500315f16b717cc92 - Exam 42, Thu Nov 21 13:58:50 2019 +0300 : hidenp
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/4m/8mq099qd23g49_vnlb19v6540000gq/T/tmpHMorBP/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  503 Nov 21 15:08 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 21 15:08 hidenp
+drwxr-xr-x  3 deepthought  deepthought  102 Nov 21 15:08 str_capitalizer
+
+/var/folders/4m/8mq099qd23g49_vnlb19v6540000gq/T/tmpHMorBP/user/hidenp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  706 Nov 21 15:08 hidenp.c
+
+/var/folders/4m/8mq099qd23g49_vnlb19v6540000gq/T/tmpHMorBP/user/str_capitalizer:
+total 8
+-rw-r--r--  1 deepthought  deepthought  770 Nov 21 15:08 str_capitalizer.c
+ 
+= flood_fill ===================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

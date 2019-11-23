@@ -1,0 +1,81 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+oa-l6.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Nov 23 15:52:11 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191123/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/sk/xz_9ptzx4xj5d4cbrkfqrhq40000gq/T/tmpXNPrdO/user log --pretty='%H - %an, %ad : %s'
+092d2ebc80dddc3c414143fd1d0a3d6df37ae905 - Exam 42, Sat Nov 23 15:50:50 2019 +0300 : ft_itoa
+363b8a96e3291d69a59583154a44e188fac4d0b0 - Exam 42, Sat Nov 23 12:27:31 2019 +0300 : print_hex
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/sk/xz_9ptzx4xj5d4cbrkfqrhq40000gq/T/tmpXNPrdO/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 23 15:52 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   619 Nov 23 15:52 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 23 15:52 ft_itoa
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 23 15:52 print_hex
+
+/var/folders/sk/xz_9ptzx4xj5d4cbrkfqrhq40000gq/T/tmpXNPrdO/user/ft_itoa:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 23 15:52 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   651 Nov 23 15:52 ft_itoa.c
+
+/var/folders/sk/xz_9ptzx4xj5d4cbrkfqrhq40000gq/T/tmpXNPrdO/user/print_hex:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 23 15:52 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   786 Nov 23 15:52 print_hex.c
+ 
+= ft_itoa ======================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_itoa.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./d64lv8yx9j1kzahl50zo5qr2 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./zivxhb0k6t8oukyo0ehqgx98 "1" "2" "3" "4" "5" "6"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./m8jkg64k2kz425y1pqyv82dh 0
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./egt1bz99qr0er0j0pi536j8c 2147483647
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./w0tu580428wamjimgrprshqs -2147483648
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2019-11-23 15:52:19.000000000 +0300$
++++ test5.output	2019-11-23 15:52:19.000000000 +0300$
+@@ -1 +1 @@$
+--$
++-2147483648$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

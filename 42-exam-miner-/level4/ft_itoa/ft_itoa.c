@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdio.h>
+
 int ft_intlen(unsigned int  n, int len) // int length
 {
 	while(n > 0)
@@ -46,3 +48,17 @@ int main (int ac, char **av)
 	printf("\n");
 	return 0;
 }*/
+int main()
+{
+    printf("%s\n", ft_itoa(0));
+    printf("%s\n", ft_itoa(9));
+    printf("%s\n", ft_itoa(-9));
+    printf("%s\n", ft_itoa(10));
+    printf("%s\n", ft_itoa(-10));
+    printf("%s\n", ft_itoa(8124));
+    printf("%s\n", ft_itoa(-9874));
+    printf("%s\n", ft_itoa(543000));
+    printf("%s\n", ft_itoa(-2147483648LL));
+    printf("%s\n", ft_itoa(2147483647));
+    return (0);
+}
