@@ -1,17 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: apearl <apearl@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/22 23:11:43 by maparmar          #+#    #+#             */
-/*   Updated: 2019/11/27 22:30:22 by apearl           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/*####################### PASSED IN EXAM ############################*/ 
-
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -106,3 +92,19 @@ int main (void)
 	printf("\n");
 	return (0);
 }
+
+//Assignment name  : ft_split
+//Expected files   : ft_split.c
+//Allowed functions: malloc
+//--------------------------------------------------------------------------------
+//
+//Write a function that takes a string, splits it into words, and returns them as
+//a NULL-terminated array of strings.
+//
+//A "word" is defined as a part of a string delimited either by spaces/tabs/new
+//lines, or by the start/end of the string.
+//
+//Your function must be declared as follows:
+//
+//char    **ft_split(char *str);
+
