@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   brainfuck.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apearl <apearl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/24 19:32:17 by maparmar          #+#    #+#             */
-/*   Updated: 2019/03/24 19:32:19 by maparmar         ###   ########.fr       */
+/*   Updated: 2019/11/27 22:47:37 by apearl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,21 @@ void	brainfuck(char *str)
 	while (*str)
 	{
 		if (*str == '>')
-			ptr++;
+			ptr++; // перемещение по указателю
 		else if (*str == '<')
 			ptr--;
 		else if (*str == '+')
-			++(*ptr);
+			++(*ptr); // Инкременция
 		else if (*str == '-')
 			--(*ptr);
-		else if (*str == '.')
+		else if (*str == '.') // Вывод
 			write(1, ptr, 1);
 		else if (*str == '[' && *ptr == 0)
 		{
 			loop_count = 1;
 			while (loop_count != 0)
 			{
-				str++;
+				str++; // Увеличивается до тех пор: пока нет закрывающейся скобки
 				if (*str == ']')
 					--loop_count;
 				if (*str == '[')
@@ -50,7 +50,7 @@ void	brainfuck(char *str)
 			loop_count = 1;
 			while (loop_count != 0)
 			{
-				str--;
+				str--; // Уменьшается до тех пор, пока нет открывающейся скобки
 				if (*str == '[')
 					--loop_count;
 				if (*str == ']')

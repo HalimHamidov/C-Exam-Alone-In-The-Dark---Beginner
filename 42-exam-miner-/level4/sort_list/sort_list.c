@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apearl <apearl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 17:18:46 by maparmar          #+#    #+#             */
-/*   Updated: 2019/03/14 18:01:39 by maparmar         ###   ########.fr       */
+/*   Updated: 2019/11/27 22:09:52 by apearl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ int ascending(int a, int b) // function used to compare a and b and return 1 if 
 {
 	return (a <= b);
 }
-void ft_swap(int *c, int *d) // swap funtion used to swap the data of c and d.
+
+// Меняем значения чисел int по адресам
+void	ft_swap(int *c, int *d) // swap funtion used to swap the data of c and d.
 {
-	int temp;
+	int	temp;
+
 	temp = *c;
 	*c = *d;
 	*d = temp;

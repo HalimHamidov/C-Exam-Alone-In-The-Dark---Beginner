@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maparmar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: apearl <apearl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 23:11:43 by maparmar          #+#    #+#             */
-/*   Updated: 2019/02/23 00:50:04 by maparmar         ###   ########.fr       */
+/*   Updated: 2019/11/27 22:30:22 by apearl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,22 @@ int no_words(char *s)
 	return (len);
 }
 
+/*
+
+asdf qwerty zxcv
+
+start = 5;
+word_len = 0;
+
+res[0] = "asdf";
+res[1] = "qwerty";
+res[2] = "zxcv";
+
+res[0][1] = 's';
+res[1][5] = 'y';
+res[2][5] = '\0';
+
+*/
 
 char    **ft_split(char *str)
 {
@@ -82,11 +98,11 @@ char    **ft_split(char *str)
 	res[j] = 0;
 	return (res);
 }
-/*int main (void)
+int main (void)
 {
 	char** res;
 	for (res = ft_split("asdf qwerty zxcv"); *res != '\0'; res++)
 		printf("'%s',", *res);
 	printf("\n");
 	return (0);
-}*/
+}

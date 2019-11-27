@@ -1,14 +1,76 @@
 #include <stdlib.h>
-#define abs(v) (v) < 0 ? -(v) : (v) // abs function to calculate the Absolute value
+//#define abs(v) (v) < 0 ? -(v) : (v) // abs function to calculate the Absolute value
+
+int		ft_abs(int n)
+{
+	if (n < 0)
+		return (-n);
+	return (n);
+}
+
+int		abs(int v)
+{
+	return (v < 0 ? (-v) : (v));
+}
 
 void ib(int n, int b, char *res, int *p)
 {
-	char *str = "0123456789ABCDEF";
+	char *str = "0123456789ABCDEF"; // маска
 
 	if (n >= b || n <= -b) // recursive call for the function
-		ib(n /b, b, res, p);
+		ib(n / b, b, res, p);
 	res[(*p)++] = str[abs(n % b)]; 
 }
+
+// // 12345 10
+
+// // 12345 / 10 = 1234  10
+
+// // 1234 10
+// // 1234 / 10 = 123 10
+
+// // 123 10
+// // 123 / 10 = 12 10
+
+// // 12 10
+// // 12 / 10 = 1 10
+
+// // 1 10
+
+// // p = 1
+// // res[1] = str[1];
+
+// // res = "1 _ _ _ _"
+
+// // p = 2
+// // res[2] = str[2]
+
+// // res = "1 2 _ _ _"
+
+// // p = 3
+// // res[3] = str[3]
+// // res = "1 2 3 _ _"
+
+
+// // ...
+// // res = "12345";
+
+
+21 2 |
+21 / 2 = 10 2		21 % 2 = 1
+10 / 2 = 5 2		10 % 2 = 0
+5 / 2 = 2			5 % 2 = 1
+2 / 2 = 0			2 % 2 = 0
+							1
+p = 1	res[1] = 1
+p = 1	res[1] = 0
+p = 2	res[2] = 1
+p = 3	res[3] = 0
+p = 4	res[4] = 1
+
+10101
+
+
 
 
 char *ft_itoa_base(int value, int base)
