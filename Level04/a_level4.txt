@@ -1,0 +1,21 @@
+  §floodfill.c*
+fprime.c+
+ft_itoa.c+
+ft_itoa_base.c+
+ft_split.c*
+Rev_wstr.c*
+Rostring.c*
+sort_list.c*
+Brainfuck.c*
+moment.c
+ft_sort_in_tab.c+
+
+
+Level 5 
+Brackets
+cycle_detector
+Rpn_calc
+print_memory
+Options
+Checkmate.c
+biggest_pal.c

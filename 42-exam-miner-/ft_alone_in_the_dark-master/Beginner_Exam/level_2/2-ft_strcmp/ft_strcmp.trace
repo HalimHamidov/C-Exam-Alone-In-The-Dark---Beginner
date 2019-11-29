@@ -1,0 +1,154 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r8p40.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Sun Sep  1 19:29:37 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/practice-exam_20190902/evjohnst3
+
+= Git history ==================================================================
+$> git -C /var/folders/7_/9z08vd0j3fb6s4dlmxvmrzy40000gp/T/tmpkoNc4_/user log --pretty='%H - %an, %ad : %s'
+6144e50cafad6a772ab2c0f1ab035b128f040bb5 - Evan Johnston, Sun Sep 1 19:27:47 2019 -0700 : .
+704ea1f58d0b9c53df7001e663b9aa9248cf28fb - Evan Johnston, Sun Sep 1 19:24:31 2019 -0700 : .
+2bc0acec3208910a9f24c73f2ec447e80a7130bf - Evan Johnston, Sun Sep 1 19:10:03 2019 -0700 : .
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/7_/9z08vd0j3fb6s4dlmxvmrzy40000gp/T/tmpkoNc4_/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  670 Sep  1 19:29 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  1 19:29 ft_print_numbers
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  1 19:29 ft_strcmp
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  1 19:29 ft_strlen
+
+/var/folders/7_/9z08vd0j3fb6s4dlmxvmrzy40000gp/T/tmpkoNc4_/user/ft_print_numbers:
+total 8
+-rw-r--r--  1 deepthought  deepthought  231 Sep  1 19:29 ft_print_numbers.c
+
+/var/folders/7_/9z08vd0j3fb6s4dlmxvmrzy40000gp/T/tmpkoNc4_/user/ft_strcmp:
+total 8
+-rw-r--r--  1 deepthought  deepthought  587 Sep  1 19:29 ft_strcmp.c
+
+/var/folders/7_/9z08vd0j3fb6s4dlmxvmrzy40000gp/T/tmpkoNc4_/user/ft_strlen:
+total 8
+-rw-r--r--  1 deepthought  deepthought  118 Sep  1 19:29 ft_strlen.c
+ 
+= ft_strcmp ====================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strcmp.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./23age6i5s2shevrsr440x24e 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./qcr7ydj2rjkgsjqknv91rick "salut a tous tout le monde"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./ub99r79krl88rwnpvezs9y1k "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./tif9llrzo9hyg7hzoggjyc1z "a" "ab"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./oklm34qu1tatm6tlbi4lwmux "" ""
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./vt1lc5avfhx4smzj8kdh4q6i "vpSYN5EfitGq7BQ6m" "vpSYN5EfitGq7BQ6m"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./dm2773gdxftu7xb5rsx6kg9z "5xpD23eu0k4LcG7" "5xpD23eu0k4LcG7"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./bnyc1vh2wohg5db44xjce54u "o5QUnIVRXytF6" "o5QUnIVRXytF6"
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./dnakiosyr10oba34owmc6rv0 "5ngAf" ""
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./8kecmpl3trsnhb912p2zx856 "GlNrmfy" "Yg0"
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./ms4fr1wzmk5hbnl8n1z3f06y "GwrOnMbvZ" "GwrOnMbvZ"
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./hx8q4ta8f72j3id6a816blhq "8t2BzYXgumjM1fH" "8t2BzYXgumjM1fH"
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./we2s1ae055i9qq5x8fyrmx4x "X7QPfLd2r8w9" "8ni"
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./z6kykyoljrpkcnkftq8mvdjz "b98nkINyAYXv" "MKmIx"
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./x72yzo9yau6t3i5z0568lbb4 "tUA8" "E6OFz"
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./g619gw81afpfjytm1gjzlbi5 "wdWuNEneKYziA" "74nR0N5"
+$> diff -U 3 user_output_test16 test16.output | cat -e
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./boc6npz5twlahncvezdovaeu "Xlg8s" "o90Z5RjIsTSJa6AQE"
+$> diff -U 3 user_output_test17 test17.output | cat -e
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./zf584pmk1519p20hw8idm4ta "3w297n" "mFROoZk601uN"
+$> diff -U 3 user_output_test18 test18.output | cat -e
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./6h3uq3q48lqsmjw1zewhlvba "ieXAcDHvFt" "fJ5zVAPeS0h"
+$> diff -U 3 user_output_test19 test19.output | cat -e
+
+Diff OK :D
+= Test 20 ==================================================
+$> ./54x8ej9kd7ak65ljrj47hg81 "8yqR" "8yqR"
+$> diff -U 3 user_output_test20 test20.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

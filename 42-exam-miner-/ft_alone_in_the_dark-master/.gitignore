@@ -1,0 +1,6 @@
+*.o
+.DS_*
+._*
+a.out
+*.dSYM
+*sync-conflict*

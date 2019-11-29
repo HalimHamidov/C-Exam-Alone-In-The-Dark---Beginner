@@ -37,3 +37,23 @@ void    sort_in_tab(int *tab, unsigned int size)
 //
 //Input is always coherent.
 //
+/*
+ #include <stdio.h>
+ void print_arr(int arr[], int size)
+ {
+ for (int i = 0; i < size; i++)
+ {
+ printf(" %d", arr[i]);
+ }
+ printf("\n");
+ }
+ 
+ int main (void)
+ {
+ int arr[12] = {0 ,1, 3, 6, 2, 4, 1324, 16774, 9, 2, 1, 7};
+ int size = sizeof(arr) / sizeof(arr[0]);
+ sort_int_tab(arr, size);
+ print_arr(arr, size);
+ return 0;
+ }
+ */

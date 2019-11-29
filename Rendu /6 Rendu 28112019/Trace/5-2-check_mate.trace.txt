@@ -1,0 +1,44 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-e5.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Nov 28 13:01:09 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191128/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/cv/4jv07dw13pn8jsr7dmhyh6v80000gq/T/tmpn1NXOn/user log --pretty='%H - %an, %ad : %s'
+7e8f14ebbe4472a79ef360961919edf972934a55 - Exam 42, Thu Nov 28 12:45:33 2019 +0300 : sort_int_tab
+8b1dbcc75cfb2ecb0aec9c0e56815537419836fc - Exam 42, Thu Nov 28 12:13:46 2019 +0300 : sort_int_tab
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/cv/4jv07dw13pn8jsr7dmhyh6v80000gq/T/tmpn1NXOn/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 28 13:01 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   519 Nov 28 13:01 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Nov 28 13:01 sort_int_tab
+
+/var/folders/cv/4jv07dw13pn8jsr7dmhyh6v80000gq/T/tmpn1NXOn/user/sort_int_tab:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Nov 28 13:01 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   331 Nov 28 13:01 sort_int_tab.c
+ 
+= check_mate ===================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

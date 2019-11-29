@@ -10,39 +10,39 @@ size_t    ft_strlen(const char *s)
     return (i);
 }
 
-int ft_nbrlen(long nbr, int len)
+int ft_nlen(long n, int len)
 {
-    while (nbr > 0)
+    while (n > 0)
     {
-        nbr = nbr/10;
+        n = n/10;
         len++;
     }
     return (len);
 }
 
-char *ft_itoa(int nb)
+char *ft_itoa(int nbr)
 {
-    int nbr;
+    long n;
     char *res;
     int len;
     char *str;
     
     str = "0123456789";
-    len = nb < 0 ? 1 : 0;
-    nbr = nb < 0 ? -(long)nb : nb;
-    len = ft_nbrlen(nbr, len);
-    len = (nb == 0) ? 1 : len;
+    len = nbr < 0 ? 1 : 0;
+    n = nbr < 0 ? -(long)nbr : nbr;
+    len = ft_nlen(n, len);
+    len = (nbr == 0) ? 1 : len;
     if (!(res = (char *)malloc(sizeof(char)*(len+1))))
         return (NULL);
-    if (nb < 0)
+    if (nbr < 0)
         res[0] = '-';
-    if (nb == 0)
+    if (nbr == 0)
         res[0] = '0';
     res[len] = '\0';
-    while (nbr > 0)
+    while (n > 0)
     {
-        res[--len] = str[nbr % 10];
-        nbr = nbr/10;
+        res[--len] = str[n % 10];
+        n = n/10;
     }
     return (res);
 }
@@ -67,6 +67,7 @@ char    *moment_months(unsigned int duration)
     char    *ptr_str;
     char    *numb;
     
+    len = 0;
     duration /= 2592000;
     numb = ft_itoa(duration);
     len += ft_strlen(numb);
@@ -91,6 +92,7 @@ char    *moment_days(unsigned int duration)
     char    *ptr_str;
     char    *numb;
     
+    len = 0;
     duration /= 86400;
     numb = ft_itoa(duration);
     len += ft_strlen(numb);
@@ -116,6 +118,7 @@ char    *moment_hours(unsigned int duration)
     char    *ptr_str;
     char    *numb;
     
+    len = 0;
     duration /= 3600;
     numb = ft_itoa(duration);
     len += ft_strlen(numb);
@@ -174,10 +177,9 @@ char    *moment_seconds(unsigned int duration)
     if (duration != 1)
         len += 1;
     str = malloc(len * sizeof(char));
-    printf();
     ptr_str = str;
     ft_strcpy(str, numb);
-    str = str + ft_strlen(numb);//ft_strlen(numb);
+    str = str + ft_strlen(numb);
     if (duration != 1)
         ft_strcpy(str, " seconds ago.");
     else
@@ -200,3 +202,98 @@ char    *moment(unsigned int duration)
         return (moment_months(duration));
     return (NULL);
 }
+
+// #include <stdio.h>
+// int     main(void)
+// {
+//     printf("%s\n", moment(0));
+//     printf("%s\n", moment(1));
+//     printf("%s\n", moment(30));
+//     printf("%s\n", moment(65));
+//     printf("%s\n", moment(120));
+//     printf("%s\n", moment(2400));
+//     printf("%s\n", moment(3735));
+//     printf("\n");
+//     printf("%s\n", moment(50));
+//     printf("%s\n", moment(10));
+//     printf("%s\n", moment(0));
+//     printf("%s\n", moment(1));
+//     printf("%s\n", moment(65));
+//     printf("%s\n", moment(120));
+//     printf("%s\n", moment(2400));
+//     printf("%s\n", moment(3599));
+//     printf("%s\n", moment(3600));
+//     printf("%s\n", moment(36000));
+//     printf("%s\n", moment(12345));
+//     printf("%s\n", moment(86399));
+//     printf("%s\n", moment(86400));
+//     printf("%s\n", moment(100000));
+//     printf("%s\n", moment(123450));
+//     printf("%s\n", moment(863990));
+//     printf("%s\n", moment(2593000));
+//     printf("%s\n", moment(3000000));
+//     printf("%s\n", moment(5000000));
+//     printf("%s\n", moment(20000000));
+//         printf("\n");
+//     printf("%s\n", moment(33100000));
+    
+// }
+
+//Assignment name  : moment
+//Expected files   : moment.c
+//Allowed functions: malloc, free
+//--------------------------------------------------------------------------------
+//
+//Create a function that takes a duration in seconds as parameter and returns a
+//string with the number of seconds, minutes, hours, days or months elapsed.
+//This function supposes that months are 30-days long and ignores leap years.
+//
+//The format of this string will be :
+//
+//xxx {second(s)|minute(s)|hour(s)|day(s)|month(s)} ago.
+//
+//Your function should return the lowest possible value (as you can see below
+//                                                       in the examples).
+//
+//The prototype of this function will be :
+//
+//char    *moment(unsigned int duration)
+//
+//Examples:
+//
+//moment(0)       => 0 seconds ago.
+//moment(1)       => 1 second ago.
+//moment(30)      => 30 seconds ago.
+//moment(65)      => 1 minute ago.
+//moment(120)     => 2 minutes ago.
+//moment(2400)    => 40 minutes ago.
+//moment(3735)    => 1 hour ago.
+
+// 0 seconds ago.
+// 1 second ago.
+// 30 seconds ago.
+// 1 minute ago.
+// 2 minutes ago.
+// 40 minutes ago.
+// 1 hour ago.
+
+// 50 seconds ago.
+// 10 seconds ago.
+// 0 seconds ago.
+// 1 second ago.
+// 1 minute ago.
+// 2 minutes ago.
+// 40 minutes ago.
+// 59 minutes ago.
+// 1 hour ago.
+// 10 hours ago.
+// 3 hours ago.
+// 23 hours ago.
+// 1 day ago.
+// 1 day ago.
+// 1 day ago.
+// 9 days ago.
+// 1 month ago.
+// 1 month ago.
+// 1 month ago.
+// 7 months ago.

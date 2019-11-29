@@ -1,62 +1,43 @@
 #include <stdlib.h>
-#include <stdio.h> //for main test
+#include <stdio.h>
 
-static int    ft_strlen(const char *s)
+int ft_nlen(long n, int len)
 {
-    int i;
-    
-    i = 0;
-    while (s[i])
-        i++;
-    return i;
-}
-
-static char    *ft_strrev(char *str)
-{
-    int i;
-    int j;
-    int tmp;
-    
-    i = 0;
-    j = ft_strlen(str);
-    while (j > i)
+    while (n > 0)
     {
-        j--;
-        tmp = str[i];
-        str[i] = str[j];
-        str[j] = tmp;
-        i++;
+        n = n/10;
+        len++;
     }
-    return str;
+    return (len);
 }
 
-char    *ft_itoa(int nbr)
+char *ft_itoa(int nbr)
 {
-    int i;
-    int neg;
-    char *tmp;
+    long n;
+    char *res;
+    int len;
+    char *str;
     
-    i = 0;
-    neg = 0;
-    tmp = malloc(sizeof(char) * 12);
-    if (tmp == NULL || nbr == 0)
-        return ((nbr == 0) ? "0" : NULL);
-    if (nbr == -2147483648)
-        return ("-2147483648");
+    str = "0123456789";
+    len = nbr < 0 ? 1 : 0;
+    n = nbr < 0 ? -(long)nbr : nbr;
+    len = ft_nlen(n, len);
+    len = (nbr == 0) ? 1 : len;
+    if (!(res = (char *)malloc(sizeof(char)*(len+1))))
+        return (NULL);
     if (nbr < 0)
+        res[0] = '-';
+    if (nbr == 0)
+        res[0] = '0';
+    res[len] = '\0';
+    while (n > 0)
     {
-        neg = 1;
-        nbr *= -1;
+        res[--len] = str[n % 10];
+        n = n/10;
     }
-    while (nbr)
-    {
-        tmp[i++] = (nbr % 10) + '0';
-        nbr /= 10;
-    }
-    if (neg)
-        tmp[i] = '-';
-    return ft_strrev(tmp);
+    return (res);
 }
+
 
 int main()
 {
