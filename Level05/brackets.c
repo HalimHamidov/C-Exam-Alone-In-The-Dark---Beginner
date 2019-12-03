@@ -1,56 +1,61 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
-#define MATCH(a, b) ((a == ')' && b == '(') || (a == ']' && b == '[') || (a == '}' && b == '{'))
+#define MATCH(a, b) ((a == ')' && b == '(') || (a == ']' && b =='[') || (a == '}' && b == '{'))
 
-int	ft_strlen(char *str)
+int ft_strlen(char *str);
+int brackets(char *str);
+
+int main(int argc, char **argv)
 {
-	int i = -1;
-	while (str[++i]);
-	return (i);
+    int i;
+    
+    i = 1;
+    if (argc < 2)
+    {
+        write (1, "\n", 1);
+        return (0);
+    }
+    while (i < argc)
+    {
+        if (brackets(argv[i]) == -1)
+            write (1, "Error\n", 6);
+        else
+            write (1, "OK\n", 3);
+        i++;
+    }
+    return (0);
 }
 
-int	brackets(char *str)
+int ft_strlen(char *str)
 {
-	int i = 0;
-	int stack[ft_strlen(str)];
-
-	while (*str)
-	{
-		if (*str == '(' || *str == '[' || *str == '{')
-			stack[++i] = *str;
-		else if (*str == ')' || *str == ']' || *str == '}')
-		{
-			if (MATCH(*str, stack[i]) == 0)
-				return (-1);
-			--i;
-		}
-		str++;
-	}
-	if (i != 0)
-		return (-1);
-	return (0);
+    int i;
+    
+    i = 0;
+    while(str[i])
+        i++;
+    return (i);
 }
 
-int	main(int ac, char **av)
+int brackets(char *str)
 {
-	if (ac < 2)
-	{
-		write(1, "\n", 1);
-		return (0);
-	}
-
-	int i = 1;
-	while (i < ac)
-	{
-		if (brackets(av[i]) == -1)
-			write(1, "Error\n", 6);
-		else
-			write(1, "OK\n", 3);
-		++i;
-	}
-	return (0);
+    int i = 0;
+    
+    int stack[ft_strlen(str)];
+    while (*str)
+    {
+        if (*str == '(' || *str == '[' || *str == '{')
+            stack[++i] = *str;
+        else if (*str == ')' || *str == ']' || *str == '}')
+        {
+            if (MATCH(*str, stack[i]) == 0)
+                return (-1);
+            --i;
+        }
+        str++;
+    }
+    if (i != 0)
+        return (-1);
+    return (0);
 }
 
 //Assignment name  : brackets
@@ -84,3 +89,39 @@ int	main(int ac, char **av)
 //$> ./brackets | cat -e
 //$
 
+// '(toto)'  // 1
+// '([)]'  // 2
+// '' '{[(0 + 0)(1 + 1)](3*(-1)){()}}'  // 3
+// '()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())'  // 4 
+// '()[]{}' '([{}])[({})]{([])}'  // 5 
+// '(]' '{)' '[}' ')' '}' ')' '(' '{' '['  // 6
+
+// Moulinette's tests
+// il-c2% gcc brackets.c -g -o brackets                 
+// il-c2% ./brackets '(toto)'
+// OK
+// il-c2% ./brackets '([)]'  
+// Error
+// il-c2% ./brackets '' '{[(0 + 0)(1 + 1)](3*(-1)){()}}' 
+// OK
+// OK
+// il-c2% ./brackets '()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())'
+// OK
+// OK
+// OK
+// OK
+// OK
+// OK
+// il-c2% ./brackets '()[]{}' '([{}])[({})]{([])}'
+// OK
+// OK
+// il-c2% ./brackets '(]' '{)' '[}' ')' '}' ')' '(' '{' '[' 
+// Error
+// Error
+// Error
+// Error
+// Error
+// Error
+// Error
+// Error
+// Error
