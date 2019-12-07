@@ -1,11 +1,10 @@
 #include <unistd.h>
-
 void print_pal(char* str, int low, int high)
 {
     while (low <= high)
-        write(1, &str[low++], 1);
+        //write(1, &str[low++], 1);
+        write(1, &str[high--], 1);
 }
-
 void biggest_pal(char *str)
 {
     int    i;
@@ -14,7 +13,6 @@ void biggest_pal(char *str)
     int high;
     int max_len;
     int start;
-    
     len = 0;
     while (str[len])
         len++;
@@ -22,14 +20,18 @@ void biggest_pal(char *str)
     max_len = 1;
     while (++i < len)
     {
+        // aeibaabaammaabaalek
+        //    |-          -|
+        // abcba (нечет) [n = 2k + 1]
+        // abccba (чет) [n = 2k]
         low = i - 1;
         high = i;
         while (low >= 0 && high < len && str[low] == str[high])
         {
-            if (high - low + 1 > max_len)
+            if (high - low + 1 >= max_len)
             {
-                start = low;
-                max_len = high - low + 1;
+                start = low; // 4
+                max_len = high - low + 1; // 12
             }
             --low;
             ++high;
@@ -38,7 +40,7 @@ void biggest_pal(char *str)
         high = i + 1;
         while (low >= 0 && high < len && str[low] == str[high])
         {
-            if (high - low + 1 > max_len)
+            if (high - low + 1 >= max_len)
             {
                 start = low;
                 max_len = high - low + 1;
@@ -49,7 +51,6 @@ void biggest_pal(char *str)
     }
     print_pal(str, start, start + max_len - 1);
 }
-
 int main(int argc, char **argv)
 {
     if (argc == 2)
@@ -57,7 +58,6 @@ int main(int argc, char **argv)
     write(1, "\n", 1);
     return 0;
 }
-
 //Assignment name  : biggest_pal
 //Expected files   : *.c, *.h
 //Allowed functions: write
@@ -89,4 +89,3 @@ int main(int argc, char **argv)
 //
 //$>
 //
-

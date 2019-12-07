@@ -1,0 +1,29 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-u3.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Nov 30 12:05:42 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191130/apearl
+= Collected files ==========================================
+$> ls -lAR /var/folders/k7/h7dw0jnn6xjb4qh38p2dbg7h0000gq/T/tmpeCDDhQ/user
+ 
+= biggest_pal ==================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================

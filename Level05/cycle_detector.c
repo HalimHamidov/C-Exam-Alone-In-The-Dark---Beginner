@@ -1,20 +1,12 @@
-#include "list.h"
+//#include "list.h"
 #include <stdio.h>
 
-int     cycle_detector(const t_list *list)
+typedef struct     s_list
 {
-    const t_list *l1 = list;
-    const t_list *l2 = list;
-    
-    while (l1 && l2 && l2->next)
-    {
-        l1 = l1->next;
-        l2 = l2->next->next;
-        if (l1 == l2)
-            return (1);
-    }
-    return (0);
-}
+    int            data;
+    struct s_list  *next;
+}                  t_list;
+
 
 int		cycle_detector(const t_list *list)
 {
@@ -42,7 +34,7 @@ int		main(void)
 	t_1.next = &t_2;
 	t_2.next = &t_3;
 	t_3.next = &t_4;
-	t_4.next = &t_5;
+	t_4.next = &t_3;
 	t_5.next = NULL;
 	if (cycle_detector(&t_1) == 1)
 		printf("Cycle FOUND.\n");
