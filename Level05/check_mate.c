@@ -1,76 +1,69 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
-typedef struct s_pos
+typedef struct  sp
 {
-	int row;
-	int col;
-}				t_pos;
+    int x;
+    int y;
+}               tp;
 
-t_pos	find_king(int board_size, char **board)
+tp fk(int bs, char **b)
 {
-	int row = 0;
-	int col;
-	while (row < board_size)
-	{
-		col = 0;
-		while (col < board_size)
-		{
-			if (board[row][col] == 'K')
-				return ((t_pos){row, col}); // Returns struct t_pos with values of row, col
-			++col;
-		}
-		++row;
-	}
-	return ((t_pos){-2, -2});
+    int x = 0;
+    int y;
+    while (x < bs)
+    {
+        y = 0;
+        while (y < bs)
+        {
+            if (b[x][y] == 'K')
+                return ((tp){x, y});
+            ++y;
+        }
+        ++x;
+    }
+    return ((tp){-2, -2});
 }
 
-int		check_capture(t_pos pos, t_pos direction, int b_size, char **board)
+int cc(tp p, tp d, int bs, char **b)
 {
-	pos.row += direction.row;
-	pos.col += direction.col;
-	if (pos.row < 0 || pos.row >= b_size || pos.col < 0 || pos.col >= b_size)
-		return (0);
-
-	if (board[pos.row][pos.col] == 'Q')
-		return (1);
-	else if (board[pos.row][pos.col] == 'R')
-		return (direction.row == 0 || direction.col == 0); // Returns 1 if true, 0 if false
-	else if (board[pos.row][pos.col] == 'B')
-		return (direction.row != 0 && direction.col != 0); // Returns 1 if true, 0 if false
-	else if (board[pos.row][pos.col] == 'P')
-		return (direction.row == 1 && direction.col != 0
-				&& board[pos.row - 1][pos.col - direction.col] == 'K'); // Returns 1 if true, 0 if false
-
-	return (check_capture(pos, direction, b_size, board));
+    p.x += d.x;
+    p.y += d.y;
+    if (p.x < 0 || p.x >= bs || p.y < 0 || p.y >= bs)
+        return (0);
+    if (b[p.x][p.y] == 'Q')
+        return (1);
+    else if (b[p.x][p.y] == 'R')
+        return (d.x == 0  || d.y == 0);
+    else if (b[p.x][p.y] == 'B')
+        return (d.x != 0 && d.y != 0);
+    else if (b[p.x][p.y] == 'P')
+        return (d.x == 1 && d.y != 0 && b[p.x-1][p.y - d.y] == 'K');
+    return (cc(p, d, bs, b));
+}
+int cm(int bs, char **b)
+{
+    tp kp = fk(bs, b);
+    return (
+            cc(kp, (tp){-1, -1}, bs, b)
+            || cc(kp, (tp){-1, 0}, bs, b)
+            || cc(kp, (tp){-1, 1}, bs, b)
+            || cc(kp, (tp){0, -1}, bs, b)
+            || cc(kp, (tp){0, 1}, bs, b)
+            || cc(kp, (tp){1, -1}, bs, b)
+            || cc(kp, (tp){1, 0}, bs, b)
+            || cc(kp, (tp){1, 1}, bs, b));
+            
 }
 
-int		check_mate(int board_size, char **board)
+int main(int argc, char **argv)
 {
-	t_pos king_pos = find_king(board_size, board);
-
-	return (
-		check_capture(king_pos, (t_pos){-1, -1}, board_size, board)
-		|| check_capture(king_pos, (t_pos){-1, 0}, board_size, board)
-		|| check_capture(king_pos, (t_pos){-1, 1}, board_size, board)
-		|| check_capture(king_pos, (t_pos){0, -1}, board_size, board)
-		|| check_capture(king_pos, (t_pos){0, 1}, board_size, board)
-		|| check_capture(king_pos, (t_pos){1, -1}, board_size, board)
-		|| check_capture(king_pos, (t_pos){1, 0}, board_size, board)
-		|| check_capture(king_pos, (t_pos){1, 1}, board_size, board)
-		); // Returns 1 if logical test is true, 0 if false
-}
-
-int		main(int ac, char **av)
-{
-	if (ac < 2)
-		write(1, "\n", 1);
-	else if (check_mate(ac - 1, &av[1]))
-		write(1, "Success\n", 8);
-	else
-		write(1, "Fail\n", 5);
-	return (0);
+    if (argc < 2)
+        write (1, "\n", 1);
+    else if (cm(argc - 1, &argv[1]))
+        write (1, "Success\n", 8);
+    else
+        write (1, "Fail\n", 5);
+    return (0);
 }
 
 //Assignment name  : check_mate
@@ -78,40 +71,39 @@ int		main(int ac, char **av)
 //Allowed functions: write, malloc, free
 //--------------------------------------------------------------------------------
 //
-//Write a program that takes rows of a chessboard as its argument and checks if
-//the King is in a check position.
+//Write a program who takes rows of a chessboard in argument and check if your 
+//King is in a check position.
 //
-//Chess is played on a chessboard, a square 8 by 8 board with
-//distinct pieces on it: King, Queen, Bishop, Knight, Rook and Pawns.
-//For this exercise, you will only play with Pawns, Bishops, Rooks and Queen...
+//Chess is played on a chessboard, a squared board of 8-squares length with 
+//specific pieces on it : King, Queen, Bishop, Knight, Rook and Pawns.
+//For this exercice, you will only play with Pawns, Bishops, Rooks and Queen...
 //and obviously a King.
 //
-//Each piece has a unique pattern of capture. All patterns of capture are
-//detailed in the examples.txt file.
+//Each piece have a specific method of movement, and all patterns of capture are
+//detailled in the examples.txt file.
 //
-//A piece can capture only the first enemy piece it finds in its capture
-//pattern.
+//A piece can capture only the first ennemy piece it founds on its capture
+//patterns.
 //
-//The board will have a variable size but will remain a square. There will
-//only be one King and all other pieces are against it.
-//All other characters except those used for pieces are considered empty squares.
+//The board have a variable size but will remains a square. There's only one King
+//and all other pieces are against it. All other characters except those used for
+//pieces are considered as empty squares.
 //
-//The King is considered as in a check position when an enemy piece can
-//capture it.
-//When this is the case, you will print "Success" on the standard output
+//The King is considered as in a check position when an other enemy piece can
+//capture it. When it's the case, you will print "Success" on the standard output
 //followed by a newline, otherwise you will print "Fail" followed by a newline.
 //
-//If there are no arguments, the program will print only a newline.
+//If there is no arguments, the program will only print a newline.
 //
 //Examples:
 //
-//$> ./check_mate '..' '.K' | cat -e
+//$> ./chessmate '..' '.K' | cat -e
 //Fail$
 //$> ./check_mate 'R...' '.K..' '..P.' '....' | cat -e
 //Success$
-//$> ./check_mate 'R...' 'iheK' '....' 'jeiR' | cat -e
+//$> ./chessmate 'R...' 'iheK' '....' 'jeiR' | cat -e
 //Success$
-//$> ./check_mate | cat -e
+//$> ./chessmate | cat -e
 //$
 //$>
 

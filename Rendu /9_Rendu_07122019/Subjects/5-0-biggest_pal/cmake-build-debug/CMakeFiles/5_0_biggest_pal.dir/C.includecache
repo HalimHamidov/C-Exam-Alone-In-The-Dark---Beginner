@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apearl/Desktop/exam/Rendu /9_Rendu_07122019/Subjects/5-0-biggest_pal/biggest_pal.c
+unistd.h
+-
+
