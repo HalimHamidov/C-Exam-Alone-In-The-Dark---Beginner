@@ -99,11 +99,21 @@ int main(int argc, char **argv)
 //
 //$> ./chessmate '..' '.K' | cat -e
 //Fail$
-//$> ./check_mate 'R...' '.K..' '..P.' '....' | cat -e
+//$> ./chessmate 'R...' '.K..' '..P.' '....' | cat -e
 //Success$
 //$> ./chessmate 'R...' 'iheK' '....' 'jeiR' | cat -e
 //Success$
 //$> ./chessmate | cat -e
 //$
 //$>
-
+il-g5% ./chessmate '...B.' '.B...' '$%^&*' '...K.' '.....'
+Success
+il-g5% ./chessmate "...B." ".T..." "....." "...K." "....."
+Fail
+il-g5% ./chessmate "K"
+Fail
+il-g5% ./chessmate ./a.o
+Fail
+il-g5% ./chessmate "B....." "......" "......" "......" "......" ".....K"
+Success
+il-g5%
