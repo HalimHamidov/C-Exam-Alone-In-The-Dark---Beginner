@@ -123,32 +123,32 @@ Level05/fast:
 	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/build
 .PHONY : Level05/fast
 
-check_mate.o: check_mate.c.o
+rpn_calc.o: rpn_calc.c.o
 
-.PHONY : check_mate.o
+.PHONY : rpn_calc.o
 
 # target to build an object file
-check_mate.c.o:
-	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/check_mate.c.o
-.PHONY : check_mate.c.o
+rpn_calc.c.o:
+	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/rpn_calc.c.o
+.PHONY : rpn_calc.c.o
 
-check_mate.i: check_mate.c.i
+rpn_calc.i: rpn_calc.c.i
 
-.PHONY : check_mate.i
+.PHONY : rpn_calc.i
 
 # target to preprocess a source file
-check_mate.c.i:
-	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/check_mate.c.i
-.PHONY : check_mate.c.i
+rpn_calc.c.i:
+	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/rpn_calc.c.i
+.PHONY : rpn_calc.c.i
 
-check_mate.s: check_mate.c.s
+rpn_calc.s: rpn_calc.c.s
 
-.PHONY : check_mate.s
+.PHONY : rpn_calc.s
 
 # target to generate assembly for a file
-check_mate.c.s:
-	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/check_mate.c.s
-.PHONY : check_mate.c.s
+rpn_calc.c.s:
+	$(MAKE) -f CMakeFiles/Level05.dir/build.make CMakeFiles/Level05.dir/rpn_calc.c.s
+.PHONY : rpn_calc.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Level05"
-	@echo "... check_mate.o"
-	@echo "... check_mate.i"
-	@echo "... check_mate.s"
+	@echo "... rpn_calc.o"
+	@echo "... rpn_calc.i"
+	@echo "... rpn_calc.s"
 .PHONY : help
 
 

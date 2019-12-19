@@ -10,7 +10,7 @@ typedef struct     s_list
 
 int		cycle_detector(const t_list *list)
 {
-	const t_list *l1 = list;
+	const t_ list *l1 = list;
 	const t_list *l2 = list;
 
 	while (l1 && l2 && l2->next)

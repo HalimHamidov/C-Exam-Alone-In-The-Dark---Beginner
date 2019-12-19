@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Level05.dir/check_mate.c.o"
+  "CMakeFiles/Level05.dir/rpn_calc.c.o"
   "Level05"
   "Level05.pdb"
 )

@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/apearl/Desktop/exam/Level05/. 
+C_INCLUDES = 
 

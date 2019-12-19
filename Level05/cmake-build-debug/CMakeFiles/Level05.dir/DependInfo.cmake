@@ -4,13 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/apearl/Desktop/exam/Level05/check_mate.c" "/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles/Level05.dir/check_mate.c.o"
+  "/Users/apearl/Desktop/exam/Level05/rpn_calc.c" "/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles/Level05.dir/rpn_calc.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../."
   )
 
 # Targets to which this target links.

@@ -57,27 +57,27 @@ include CMakeFiles/Level05.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Level05.dir/flags.make
 
-CMakeFiles/Level05.dir/check_mate.c.o: CMakeFiles/Level05.dir/flags.make
-CMakeFiles/Level05.dir/check_mate.c.o: ../check_mate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Level05.dir/check_mate.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Level05.dir/check_mate.c.o   -c /Users/apearl/Desktop/exam/Level05/check_mate.c
+CMakeFiles/Level05.dir/rpn_calc.c.o: CMakeFiles/Level05.dir/flags.make
+CMakeFiles/Level05.dir/rpn_calc.c.o: ../rpn_calc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Level05.dir/rpn_calc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Level05.dir/rpn_calc.c.o   -c /Users/apearl/Desktop/exam/Level05/rpn_calc.c
 
-CMakeFiles/Level05.dir/check_mate.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Level05.dir/check_mate.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/apearl/Desktop/exam/Level05/check_mate.c > CMakeFiles/Level05.dir/check_mate.c.i
+CMakeFiles/Level05.dir/rpn_calc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Level05.dir/rpn_calc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/apearl/Desktop/exam/Level05/rpn_calc.c > CMakeFiles/Level05.dir/rpn_calc.c.i
 
-CMakeFiles/Level05.dir/check_mate.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Level05.dir/check_mate.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/apearl/Desktop/exam/Level05/check_mate.c -o CMakeFiles/Level05.dir/check_mate.c.s
+CMakeFiles/Level05.dir/rpn_calc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Level05.dir/rpn_calc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/apearl/Desktop/exam/Level05/rpn_calc.c -o CMakeFiles/Level05.dir/rpn_calc.c.s
 
 # Object files for target Level05
 Level05_OBJECTS = \
-"CMakeFiles/Level05.dir/check_mate.c.o"
+"CMakeFiles/Level05.dir/rpn_calc.c.o"
 
 # External object files for target Level05
 Level05_EXTERNAL_OBJECTS =
 
-Level05: CMakeFiles/Level05.dir/check_mate.c.o
+Level05: CMakeFiles/Level05.dir/rpn_calc.c.o
 Level05: CMakeFiles/Level05.dir/build.make
 Level05: CMakeFiles/Level05.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable Level05"
