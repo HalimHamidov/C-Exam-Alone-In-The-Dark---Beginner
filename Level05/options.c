@@ -1,34 +1,34 @@
 #include <unistd.h>
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
 	int i = 1;
-	int  t[32] = {0}; 
+	int t[32] = {0};
 	int j ;
 
-	if(ac == 1)
+	if(argc == 1)
 	{
 		write(1,"options: abcdefghijklmnopqrstuvwxyz\n",36);
 		return 0;
 	}
 	i = 1;
-	while (i < ac)
+	while (i < argc)
 	{
 		j = 1;
-		if(av[i][0] == '-')
+		if(argv[i][0] == '-')
 		{
-			while(av[i][j] && av[i][j] >= 'a'  && av[i][j] <= 'z')
+			while(argv[i][j] && av[i][j] >= 'a' && argv[i][j] <= 'z')
 			{
-				if(av[i][j] == 'h')
+				if(argv[i][j] == 'h')
 				{
 					write(1,"options: abcdefghijklmnopqrstuvwxyz\n",36);
 					return 0;
 				}
 
-				t['z' - av[i][j] + 6] = 1; //26-1+6=31  26-2+6=30  26-3+6=29  for abc  || 26-9+6=23 26-10+6=22  21
+				t['z' - argv[i][j] + 6] = 1; //26-1+6=31  26-2+6=30  26-3+6=29  for abc
 				j++;
 			}
-			if (av[i][j])
+			if (argv[i][j])
 			{
 				write(1,"Invalid Option\n",15);
 				return 0;

@@ -1,0 +1,93 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+oa-g2.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Dec 21 13:34:14 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191221/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/wq/br4sl4ld0gd77mnhbkz1phmc0000gq/T/tmpfn8FZg/user log --pretty='%H - %an, %ad : %s'
+1f46ce1bb3b4a0ba2181f8742c1901454b8cfce8 - Exam 42, Sat Dec 21 13:32:11 2019 +0300 : check_mate
+db27d9693f9b370d19b394683e2ed662ce3c9776 - Exam 42, Sat Dec 21 12:57:16 2019 +0300 : brackets
+b1dc288266d6e22bbb175de47a82c2f01115cfbd - Exam 42, Sat Dec 21 12:47:17 2019 +0300 : brackets
+171ee3adb90b3d2ab71008e0df004640106e4f0d - Exam 42, Sat Dec 21 12:46:13 2019 +0300 : brackets
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/wq/br4sl4ld0gd77mnhbkz1phmc0000gq/T/tmpfn8FZg/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Dec 21 13:34 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1163 Dec 21 13:34 __GIT_HISTORY
+drwxr-xr-x  4 deepthought  deepthought   136 Dec 21 13:34 brackets
+drwxr-xr-x  4 deepthought  deepthought   136 Dec 21 13:34 check_mate
+
+/var/folders/wq/br4sl4ld0gd77mnhbkz1phmc0000gq/T/tmpfn8FZg/user/brackets:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Dec 21 13:34 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1040 Dec 21 13:34 brackets.c
+
+/var/folders/wq/br4sl4ld0gd77mnhbkz1phmc0000gq/T/tmpfn8FZg/user/check_mate:
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Dec 21 13:34 .DS_Store
+-rw-r--r--  1 deepthought  deepthought  1533 Dec 21 13:34 check_mate.c
+ 
+= check_mate ===================================================================
+$> gcc -Wextra -Wall -Werror check_mate.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./3tif1awv9f400oegt27rqzl4 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./zzdk6wn2x9ydc05x8h17t2t2 '...B.' '.B...' '$%^&*' '...K.' '.....'
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./x9yu85vvdrewno8q5s3zh8c9  "...B." ".T..." "....." "...K." "....."
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./7mqbidtkq6rvv42qhti16c4x "K"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./rwofgw8egsin3vfbf12ryxay "BPKP" "PRP." ".Q.." "..P."
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./kt8gfq9neefjxt5wahkz5c8v "B....." "......" "......" "......" "......" ".....K"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./1hk0fjhg0clbfphogjxpir8l "K....." "......" "......" "......" "......" ".....B"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./ynue2qzi8t9q1rqef3gh8coe '........' '........' '.P....P.' '...B.B..' '....Q...' '..R..R..' '......K.' '...R....'
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

@@ -1,3 +1,4 @@
+//passed exam
 #include <unistd.h>
 
 void print_pal(char *str, int l, int h);
