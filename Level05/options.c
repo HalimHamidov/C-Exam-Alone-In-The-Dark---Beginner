@@ -28,7 +28,6 @@ int main(int ac, char **av)
 				t['z' - av[i][j] + 6] = 1; //26-1+6=31  26-2+6=30  26-3+6=29  for abc  || 26-9+6=23 26-10+6=22  21
 				j++;
 			}
-
 			if (av[i][j])
 			{
 				write(1,"Invalid Option\n",15);
@@ -39,18 +38,16 @@ int main(int ac, char **av)
 		i++;
 	}
 	i = 0;
-		while (i < 32)
-		{
-		t[i] = '0' + t[i];
-		write(1,&t[i++],1);
-			if(i == 32)
-				write(1,"\n",1);
-			else if(i % 8 == 0)
-				write(1," ",1);
-
-		}
-
-	return 0;
+    while (i < 32)
+    {
+        t[i] = '0' + t[i];
+        write(1,&t[i++],1);
+        if(i == 32)
+            write(1,"\n",1);
+        else if(i % 8 == 0)
+            write(1," ",1);
+    }
+    return 0;
 }
 //
 //Assignment name  : options

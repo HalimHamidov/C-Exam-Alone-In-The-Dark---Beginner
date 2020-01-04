@@ -1,3 +1,0 @@
-/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/apearl/Desktop/exam/Level05/cmake-build-debug/CMakeFiles/Level05.dir

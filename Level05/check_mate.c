@@ -1,3 +1,4 @@
+// passed the exam
 #include <unistd.h>
 
 typedef struct  sp
@@ -40,6 +41,7 @@ int cc(tp p, tp d, int bs, char **b)
         return (d.x == 1 && d.y != 0 && b[p.x-1][p.y - d.y] == 'K');
     return (cc(p, d, bs, b));
 }
+
 int cm(int bs, char **b)
 {
     tp kp = fk(bs, b);

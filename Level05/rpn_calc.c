@@ -1,3 +1,4 @@
+//passed the exam
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -141,4 +142,65 @@ int main(int ac, char **av)
 //Error$
 //$> ./rpn_calc |cat -e
 //Error$
+//"2 3 -" "5 6 +"
 
+/*
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-n6.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Sat Dec 28 12:28:25 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191228/apearl
+
+= Git history ==================================================================
+$> git -C /var/folders/2f/c3rmfcbn7jx3sbzb75ycv7ph0000gq/T/tmpUiuBMw/user log --pretty='%H - %an, %ad : %s'
+cd0c7d28e41cbc474efdd1fc5ab2fcae82443234 - Exam 42, Sat Dec 28 12:26:58 2019 +0300 : rpn_calc
+
+= Collected files ==========================================
+$> ls -lAR /var/folders/2f/c3rmfcbn7jx3sbzb75ycv7ph0000gq/T/tmpUiuBMw/user
+total 24
+-rw-r--r--  1 deepthought  deepthought  6148 Dec 28 12:28 .DS_Store
+-rw-r--r--  1 deepthought  deepthought   298 Dec 28 12:28 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Dec 28 12:28 rpn_calc
+
+/var/folders/2f/c3rmfcbn7jx3sbzb75ycv7ph0000gq/T/tmpUiuBMw/user/rpn_calc:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1973 Dec 28 12:28 rpn_calc.c
+
+= rpn_calc =====================================================================
+$> gcc -Wextra -Wall -Werror rpn_calc.c -o user_exe
+
+= Test 1 ===================================================
+$> ./c2rnuhrrdhtzt0eits7dz98s
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./fd2ewbo8gwaau2hkgtxsmd8n "2 3 -" "5 6 +"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+--- user_output_test2    2019-12-28 12:28:30.000000000 +0300$
++++ test2.output    2019-12-28 12:28:30.000000000 +0300$
+@@ -1 +1 @@$
+--1$
++Error$
+
+Diff KO :(
+          Grade: 0
+          
+          = Final grade: 0 ===============================================================
+*/

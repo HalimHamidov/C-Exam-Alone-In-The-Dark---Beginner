@@ -1,20 +1,3 @@
-// Passed Moulinette 2019.09.01
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   print_memory.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: evjohnst <evjohnst@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/27 11:44:54 by evjohnst          #+#    #+#             */
-/*   Updated: 2019/04/27 13:10:51 by evjohnst         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-// Passed moulinette on 2019.04.26.
-// Thanks to acarlson (github.com/bombblob) for his suggestions on improving
-// this solution.
 
 #include <unistd.h>
 

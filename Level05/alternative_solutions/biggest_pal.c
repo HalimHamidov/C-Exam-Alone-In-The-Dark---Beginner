@@ -1,60 +1,63 @@
 #include <unistd.h>
-void biggest_pal(char *str);
-void print_pal(char *str, int l, int h);
+void print_pal(char* str, int low, int high)
+{
+    while (low <= high)
+        //write(1, &str[low++], 1);
+        write(1, &str[high--], 1);
+}
+void biggest_pal(char *str)
+{
+    int    i;
+    int len;
+    int low;
+    int high;
+    int max_len;
+    int start;
+    len = 0;
+    while (str[len])
+        len++;
+    i = 1;
+    max_len = 1;
+    while (++i < len)
+    {
+        // aeibaabaammaabaalek
+        //    |-          -|
+        // abcba (нечет) [n = 2k + 1]
+        // abccba (чет) [n = 2k]
+        low = i - 1;
+        high = i;
+        while (low >= 0 && high < len && str[low] == str[high])
+        {
+            if (high - low + 1 >= max_len)
+            {
+                start = low; // 4
+                max_len = high - low + 1; // 12
+            }
+            --low;
+            ++high;
+        }
+        low = i - 1;
+        high = i + 1;
+        while (low >= 0 && high < len && str[low] == str[high])
+        {
+            if (high - low + 1 >= max_len)
+            {
+                start = low;
+                max_len = high - low + 1;
+            }
+            --low;
+            ++high;
+        }
+    }
+    print_pal(str, start, start + max_len - 1);
+}
 int main(int argc, char **argv)
 {
     if (argc == 2)
         biggest_pal(argv[1]);
-    write (1, "\n", 1);
-    return (0);
+    write(1, "\n", 1);
+    return 0;
 }
-
-void biggest_pal(char *str)
-{
-    int i = 1;
-    int len = 0;
-    int ml = 1;
-    int s;
-    int l;
-    int h;
-    while (str[len])
-        len++;
-    while (++i < len)
-    {
-        l = i - 1;
-        h = i;
-        while (l >= 0 && h < len && str[l] == str[h])
-        {
-            if (h-l+1>= ml)
-            {
-                s = l;
-                ml = h-l+1;
-            }
-            --l;
-            ++h;
-        }
-        l = i - 1;
-        h = i + 1;
-        while (l >= 0 && h < len && str[l] == str[h])
-        {
-            if (h-l+1>= ml)
-            {
-                s = l;
-                ml = h-l+1;
-            }
-            --l;
-            ++h;
-        }
-    }
-    print_pal(str, s, s+ml-1);
-}
-void print_pal(char *str, int l, int h)
-{
-    while (l <= h)
-        write (1, &str[l++], 1);
-}
-
-//
 //Assignment name  : biggest_pal
 //Expected files   : *.c, *.h
 //Allowed functions: write
@@ -86,4 +89,3 @@ void print_pal(char *str, int l, int h)
 //
 //$>
 //
-
